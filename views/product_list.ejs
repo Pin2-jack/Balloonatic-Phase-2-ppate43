@@ -1,0 +1,105 @@
+<!doctype html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Balloonatic Asylum</title>
+    <link href="/css/custom.css" rel="stylesheet">
+
+</head>
+<body id="grid">
+    <div>
+        <div class="header row">
+            <div class="logo">
+                <a href="./">
+                    <img class="img_logo" src="./images/ballon.jpg",alt="The Balloonatic Asylum" style="max-width:100%; height:auto;">
+                </a>
+            </div>
+            <div class="company_name">
+                The Balloonatic Asylum
+            </div>
+
+            <div class="menu_items">
+                <li><a href="./product_list">Products</a></li>
+                <li><a href="./about">About</a></li>
+                <li><a href="./contact" >Contact Us</a></li>
+                <li><a href="./login" >Login</a></li>
+                <li><a href="./register" >Register</a></li>
+            </div>
+        </div>
+
+        <div class="category row">
+            <div class="row_2">
+            <div class="category_list">
+             
+                    <div class="category_items">
+                        <span class="category_name">Birthday Bouquets</span>
+                    </div>
+                    <div class="category_items">
+                        <span  class="category_name">Balloony Occasions</span>
+                        
+                    </div>
+                    <div class="category_items">
+                        <span class="category_name">Build a Balloon Bouquets</span>
+                        
+                    </div>
+                    <div class="category_items">
+                        <span class="category_name">Decorating with Balloons</span>
+                        
+                    </div>
+                    <div class="category_items">
+                        <span class="category_name">Balloons in Bulk</span>
+                        
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <div class="main_section row">
+        <div class="home_page_img center ">
+            <img src="./images/fantastic.jpg">
+        </div>
+    </div>
+
+    <div class="product_section_2 row">
+        <% for (i=0;i < product_list.length; i++) { %>
+        <div class="product" >
+            <article>
+                <img class="img-responsive" src="<%= product_list[i].imageURL%>"
+                     alt="Balloon" style="width: 30%;height: 120px !important;">
+                <div class="ballon-align" style="padding-left: 0% !important;">
+                    <a class="product_name" href="/">
+                        <%= product_list[i].productName %>
+                    </a>
+                    <span class="product_price">&nbsp;&nbsp; $<%= Math.round(product_list[i].unitPrice) %> </span>
+                </div>
+                <div><%= product_list[i].manufacturer %></div>
+                <div><%= product_list[i].material %></div>
+                <div><%= product_list[i].size %></div>
+                <br>
+                <br>
+            </article>
+        </div>
+        <% } %>
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="footer row">
+            <div class="content">
+                <img src="./images/ballon.jpg" alt="The Balloonatic Asylum">
+                <div class="foot">@ All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>

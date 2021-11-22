@@ -1,0 +1,182 @@
+<!doctype html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Balloonatic Asylum</title>
+    <link href="/css/custom.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            const stateCodes = [
+        "AL",
+        "AK",
+        "AS",
+        "AZ",
+        "AR",
+        "CA",
+        "CO",
+        "CT",
+        "DE",
+        "DC",
+        "FM",
+        "FL",
+        "GA",
+        "GU",
+        "HI",
+        "ID",
+        "IL",
+        "IN",
+        "IA",
+        "KS",
+        "KY",
+        "LA",
+        "ME",
+        "MH",
+        "MD",
+        "MA",
+        "MI",
+        "MN",
+        "MS",
+        "MO",
+        "MT",
+        "NE",
+        "NV",
+        "NH",
+        "NJ",
+        "NM",
+        "NY",
+        "NC",
+        "ND",
+        "MP",
+        "OH",
+        "OK",
+        "OR",
+        "PW",
+        "PA",
+        "PR",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "UT",
+        "VT",
+        "VI",
+        "VA",
+        "WA",
+        "WV",
+        "WI",
+        "WY",
+    ];
+    
+        $.each(stateCodes, function(key, value) {   
+            debugger;
+         $('#State')
+             .append($("<option></option>")
+                        .attr("value", key)
+                        .text(value)); 
+            });
+        })
+        
+    </script>
+
+</head>
+<body id="grid">
+    <div>
+        <div class="header row">
+            <div class="logo">
+                <a href="./">
+                    <img class="img_logo" src="./images/ballon.jpg",alt="The Balloonatic Asylum" style="max-width:100%; height:auto;">
+                </a>
+            </div>
+            <div class="company_name">
+                The Balloonatic Asylum
+            </div>
+
+            <div class="menu_items">
+                    <li><i><a href="./product_list">Products</a></i></li>
+                    <li><a href="./about" >About</a></li>
+                    <li><a href="./contact" >Contact Us</a></li>
+                    <li><a href="./login" >Login</a></li>
+                    <li><a href="./register" >Register</a></li>
+            </div>
+        </div>
+
+        
+
+        <div class="main_section row">
+            <form class="register_form" method="post" action="register">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="email" name="email" class="form-control" required/>
+                  <label class="form-label" for="email">Email address</label>
+                </div>
+                 <!-- Password input -->
+                 <div class="form-outline mb-4">
+                    <input type="password" id="password1" name="password1" class="form-control" required/>
+                    <label class="form-label" for="password1">Password</label>
+                  </div>
+                   <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" id="passwordC" name="passwordC" class="form-control" required/>
+                    <label class="form-label" for="passwordC">Confirm Password</label>
+                  </div>
+               <div class="form-outline mb-4">
+                  <input type="text" id="fName" name="fName" class="form-control" required/>
+                  <label class="form-label" for="fName">First Name</label>
+                </div>
+               <div class="form-outline mb-4">
+                  <input type="text" id="lName" name="lName" class="form-control" required/>
+                  <label class="form-label" for="lName">Last Name</label>
+                </div>
+               <div class="form-outline mb-4">
+                  <input type="text" id="address" name="address" class="form-control" required/>
+                  <label class="form-label" for="address">Address</label>
+                </div>
+                 <div class="form-outline mb-4">
+                  <input type="text" id="City" name="City" class="form-control" required/>
+                  <label class="form-label" for="address">City</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <select id="State" name="State">
+                      
+                  </select>
+                  <label class="form-label" for="State">State</label>
+                </div>
+               <div class="form-outline mb-4">
+                  <input type="text" id="pCode" name="pCode" class="form-control" required/>
+                  <label class="form-label" for="pCode">Postal Code</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="text" id="phone" name="phone" class="form-control" required/>
+                  <label class="form-label" for="phone">Phone</label>
+                </div>
+
+                <input type="hidden" id="country" name="country" class="form-control" value="USA" />
+                  
+              
+              
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                <button type="submit" class="btn btn-primary btn-block"><a href="./">Cancel</a></button>
+            </form>
+        </div>
+
+ 
+        
+        <div class="row">
+            <div class="footer row">
+                <div class="content">
+                    <img src="./images/ballon.jpg" alt="The Balloonatic Asylum">
+                        <div class="foot">@ All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+</body>
+
